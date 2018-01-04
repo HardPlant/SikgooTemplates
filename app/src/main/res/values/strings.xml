@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SikgooTemplates</string>
+    <string name="match">MATCH</string>
+    <string name="restaurant">식당</string>
+    <string name="invite">초대</string>
+    <string name="event">이벤트</string>
+    <string name="search_placeholder"></string>
+</resources>
