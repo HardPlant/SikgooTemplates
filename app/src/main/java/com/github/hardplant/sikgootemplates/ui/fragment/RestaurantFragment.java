@@ -14,28 +14,17 @@ import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.data.People;
 import com.github.hardplant.sikgootemplates.data.RestaurantInfo;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
  * Created by KANG on 2018-01-12.
  */
 
-public class PeopleFragment extends Fragment {
-    private int mPageNumber;
-
-    private RecyclerView userView;
+public class RestaurantFragment extends Fragment{
     private RecyclerView restView;
-    private LinearLayoutManager mLinearLayoutManager;
     private GridLayoutManager mGridLayoutManager;
 
-    private ArrayList<People> peopleList;
     private ArrayList<RestaurantInfo> restList;
-
-    public static PeopleFragment create(int PageNumber){
-        PeopleFragment fragment = new PeopleFragment();
-        return fragment;
-    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,12 +35,6 @@ public class PeopleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_main, container, false);
-        peopleList = new ArrayList<People>();
-        mLinearLayoutManager = new LinearLayoutManager(getActivity());
-        mLinearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        userView = (RecyclerView)rootView.findViewById(R.id.user_list);
-        userView.setHasFixedSize(true);
-        userView.setLayoutManager(mLinearLayoutManager);
 
         restList = new ArrayList<RestaurantInfo>();
         mGridLayoutManager = new GridLayoutManager(getActivity(), 2);
@@ -60,6 +43,5 @@ public class PeopleFragment extends Fragment {
         restView.setHasFixedSize(true);
         restView.setLayoutManager(mGridLayoutManager);
 
-        return rootView;
-    }
+        return rootView;    }
 }
