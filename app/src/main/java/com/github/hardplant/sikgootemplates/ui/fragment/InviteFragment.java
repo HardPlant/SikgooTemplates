@@ -33,7 +33,7 @@ public class InviteFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_main, container, false);
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_user, container, false);
         peopleList = new ArrayList<People>();
         mLinearLayoutManager = new LinearLayoutManager(getActivity());
         mLinearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);

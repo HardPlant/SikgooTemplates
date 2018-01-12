@@ -34,7 +34,7 @@ public class RestaurantFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_main, container, false);
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_restaruant_info, container, false);
 
         restList = new ArrayList<RestaurantInfo>();
         mGridLayoutManager = new GridLayoutManager(getActivity(), 2);

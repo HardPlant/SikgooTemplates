@@ -55,7 +55,6 @@ public class PeopleFragment extends Fragment {
 
         restList = new ArrayList<RestaurantInfo>();
         mGridLayoutManager = new GridLayoutManager(getActivity(), 2);
-
         restView = (RecyclerView)rootView.findViewById(R.id.rest_list);
         restView.setHasFixedSize(true);
         restView.setLayoutManager(mGridLayoutManager);
