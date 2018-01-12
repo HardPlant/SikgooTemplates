@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.data.People;
 import com.github.hardplant.sikgootemplates.data.RestaurantInfo;
+import com.github.hardplant.sikgootemplates.ui.PeopleAdapter;
+import com.github.hardplant.sikgootemplates.ui.RestaurantAdapter;
 
 import java.util.ArrayList;
 
@@ -37,11 +39,19 @@ public class RestaurantFragment extends Fragment{
         ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_restaruant_info, container, false);
 
         restList = new ArrayList<RestaurantInfo>();
+        restList.add(new RestaurantInfo("Hi"));
+        restList.add(new RestaurantInfo("Hi"));
+        restList.add(new RestaurantInfo("Hi"));
+
+
         mGridLayoutManager = new GridLayoutManager(getActivity(), 2);
 
         restView = (RecyclerView)rootView.findViewById(R.id.rest_list);
         restView.setHasFixedSize(true);
         restView.setLayoutManager(mGridLayoutManager);
+
+        RestaurantAdapter restaurantAdapter = new RestaurantAdapter(getActivity(),restList);
+        restView.setAdapter(restaurantAdapter);
 
         return rootView;    }
 }

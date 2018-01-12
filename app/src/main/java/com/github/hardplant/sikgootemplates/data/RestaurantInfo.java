@@ -5,5 +5,13 @@ package com.github.hardplant.sikgootemplates.data;
  */
 
 public class RestaurantInfo {
+    String name;
 
+    public RestaurantInfo(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

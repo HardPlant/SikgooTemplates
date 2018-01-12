@@ -56,11 +56,11 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
 
         public ViewHolder(View itemView) {
             super(itemView);
-            thumbnail = (ImageView) itemView.findViewById(R.id.thumbnail);
+//            thumbnail = (ImageView) itemView.findViewById(R.id.thumbnail);
             people_name = (TextView) itemView.findViewById(R.id.people_name);
             people_hashTag = (TextView) itemView.findViewById(R.id.people_hashtag);
 
-            //cardview = (CardView) itemView.findViewById(R.id.);
+            cardview = (CardView) itemView.findViewById(R.id.user_list);
         }
     }
 }

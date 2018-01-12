@@ -12,6 +12,8 @@ import android.view.animation.Animation;
 
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.data.People;
+import com.github.hardplant.sikgootemplates.ui.PeopleAdapter;
+import com.github.hardplant.sikgootemplates.ui.RestaurantAdapter;
 
 import java.util.ArrayList;
 
@@ -40,6 +42,17 @@ public class InviteFragment extends Fragment{
         userView = (RecyclerView)rootView.findViewById(R.id.user_list);
         userView.setHasFixedSize(true);
         userView.setLayoutManager(mLinearLayoutManager);
+
+        peopleList.add(new People(null,"김"
+                , new String[]{"#Kim","Park"}));
+        peopleList.add(new People(null,"이"
+                , new String[]{"#Kim","Park"}));
+        peopleList.add(new People(null,"박"
+                , new String[]{"#Kim","Park"}));
+
+        PeopleAdapter peopleAdapter = new PeopleAdapter(getActivity(),peopleList);
+        userView.setAdapter(peopleAdapter);
+
 
         return rootView;
     }
