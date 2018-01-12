@@ -9,4 +9,21 @@ public class People {
     String Name;
     String[] HashTag;
 
+    public People(String image, String name, String[] hashTag) {
+        Image = image;
+        Name = name;
+        HashTag = hashTag;
+    }
+
+    public String getImage() {
+        return Image;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public String[] getHashTag() {
+        return HashTag;
+    }
 }

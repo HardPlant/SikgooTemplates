@@ -1,24 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-<android.support.v7.widget.RecyclerView
-    android:id="@+id/user_list"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight=".40">
-
-</android.support.v7.widget.RecyclerView>
-
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight=".20"/>
-
-<android.support.v7.widget.RecyclerView
-        android:id="@+id/rest_list"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- Timer -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:background="@color/black"
+        >
+        <TextView
+            android:id="@+id/timer_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="n월 n일 요일 오후 n시 n분"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/timer_period"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/timer_time"
+            android:layout_height="wrap_content"
+
+            android:text="n교시 수업중입니다"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <!-- RecyclerView -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/user_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight=".40">
-</android.support.v7.widget.RecyclerView>
+    </android.support.v7.widget.RecyclerView>
+
+        <!-- Match Button -->
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:background="@color/black"
+            android:layout_gravity="center"
+            android:layout_weight=".10"
+
+            android:text="MATCH"
+            android:textAlignment="center"
+            android:textSize = "40sp"
+            android:textColor="@color/white"
+
+            android:id="@+id/match_button"
+            >
+    </Button>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rest_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".40">
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
