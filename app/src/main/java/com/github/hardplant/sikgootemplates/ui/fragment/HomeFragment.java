@@ -1,5 +1,6 @@
 package com.github.hardplant.sikgootemplates.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,12 +10,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.data.People;
 import com.github.hardplant.sikgootemplates.data.RestaurantInfo;
 import com.github.hardplant.sikgootemplates.ui.PeopleAdapter;
 import com.github.hardplant.sikgootemplates.ui.RestaurantAdapter;
+import com.github.hardplant.sikgootemplates.ui.activity.MatchingActivity;
 
 import java.util.ArrayList;
 
@@ -23,7 +26,8 @@ import java.util.ArrayList;
  */
 
 public class HomeFragment extends Fragment {
-    private int mPageNumber;
+
+    private Button matchButton;
 
     private RecyclerView userView;
     private RecyclerView restView;
@@ -54,6 +58,14 @@ public class HomeFragment extends Fragment {
                 , new String[]{"#Kim","Park"}));
         peopleList.add(new People(null,"박"
                 , new String[]{"#Kim","Park"}));
+        peopleList.add(new People(null,"박"
+                , new String[]{"#Kim","Park"}));
+        peopleList.add(new People(null,"박"
+                , new String[]{"#Kim","Park"}));
+        peopleList.add(new People(null,"박"
+                , new String[]{"#Kim","Park"}));
+        peopleList.add(new People(null,"박"
+                , new String[]{"#Kim","Park"}));
 
         mLinearLayoutManager = new LinearLayoutManager(getActivity());
         mLinearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -76,7 +88,19 @@ public class HomeFragment extends Fragment {
         userView.setAdapter(peopleAdapter);
         restView.setAdapter(restaurantAdapter);
 
+        matchButton = (Button) rootView.findViewById(R.id.match_button);
+        matchButton.setOnClickListener(getMatchButtonListener());
 
         return rootView;
+    }
+
+    View.OnClickListener getMatchButtonListener(){
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), MatchingActivity.class);
+                getContext().startActivity(intent);
+            }
+        };
     }
 }
