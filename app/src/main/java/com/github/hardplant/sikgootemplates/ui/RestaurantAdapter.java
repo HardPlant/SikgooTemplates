@@ -1,6 +1,8 @@
 package com.github.hardplant.sikgootemplates.ui;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.data.RestaurantInfo;
+import com.github.hardplant.sikgootemplates.ui.activity.RestaurantInfoActivity;
 
 import java.util.ArrayList;
 
@@ -39,6 +42,14 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
         RestaurantInfo restaurantInfo = restList.get(position);
 
         holder.name.setText(restaurantInfo.getName());
+        holder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                Intent intent = new Intent(context, RestaurantInfoActivity.class);
+                context.startActivity(intent, bundle);
+            }
+        });
     }
 
     @Override
@@ -49,6 +60,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView thumbnail;
         TextView name;
+        View.OnClickListener listener;
         CardView cardView;
 
         public ViewHolder(View itemView) {
@@ -58,6 +70,11 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
             name = (TextView) itemView.findViewById(R.id.restraunt_name);
 
             cardView = (CardView) itemView.findViewById(R.id.rest_list);
+        }
+
+        public void setOnClickListener(View.OnClickListener event){
+            listener = event;
+            itemView.setOnClickListener(listener);
         }
     }
 }
