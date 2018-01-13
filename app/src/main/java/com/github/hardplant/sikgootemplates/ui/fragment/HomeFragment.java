@@ -16,14 +16,13 @@ import com.github.hardplant.sikgootemplates.data.RestaurantInfo;
 import com.github.hardplant.sikgootemplates.ui.PeopleAdapter;
 import com.github.hardplant.sikgootemplates.ui.RestaurantAdapter;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
  * Created by KANG on 2018-01-12.
  */
 
-public class PeopleFragment extends Fragment {
+public class HomeFragment extends Fragment {
     private int mPageNumber;
 
     private RecyclerView userView;
@@ -34,8 +33,8 @@ public class PeopleFragment extends Fragment {
     private ArrayList<People> peopleList;
     private ArrayList<RestaurantInfo> restList;
 
-    public static PeopleFragment create(int PageNumber){
-        PeopleFragment fragment = new PeopleFragment();
+    public static HomeFragment create(int PageNumber){
+        HomeFragment fragment = new HomeFragment();
         return fragment;
     }
 
@@ -47,7 +46,7 @@ public class PeopleFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_main, container, false);
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_home, container, false);
         peopleList = new ArrayList<People>();
         peopleList.add(new People(null,"김"
                 , new String[]{"#Kim","Park"}));

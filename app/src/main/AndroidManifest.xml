@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.RestaurantInfoActivity" />
-        <activity android:name=".ui.activity.ProfileActivity"></activity>
+        <activity android:name=".ui.activity.ProfileActivity" />
+        <activity android:name=".ui.activity.MatchingActivity"></activity>
     </application>
 
 </manifest>
