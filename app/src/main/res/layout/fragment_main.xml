@@ -3,9 +3,8 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- RecyclerView -->
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/user_list"
+        android:id="@+id/rest_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".40">
@@ -33,11 +32,12 @@
             >
     </Button>
 
+    <!-- RecyclerView -->
     <android.support.v7.widget.RecyclerView
-            android:id="@+id/rest_list"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".40">
+        android:id="@+id/user_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".40">
     </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

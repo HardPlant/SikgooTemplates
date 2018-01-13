@@ -5,6 +5,7 @@ package com.github.hardplant.sikgootemplates.data;
  */
 
 public class RestaurantInfo {
+    int id;
     String name;
 
     public RestaurantInfo(String name) {

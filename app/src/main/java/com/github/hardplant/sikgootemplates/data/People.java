@@ -5,6 +5,7 @@ package com.github.hardplant.sikgootemplates.data;
  */
 
 public class People {
+    int id;
     String Image;
     String Name;
     String[] HashTag;
@@ -25,5 +26,9 @@ public class People {
 
     public String[] getHashTag() {
         return HashTag;
+    }
+
+    public int getId() {
+        return id;
     }
 }

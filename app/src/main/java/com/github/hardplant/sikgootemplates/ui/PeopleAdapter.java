@@ -1,6 +1,10 @@
 package com.github.hardplant.sikgootemplates.ui;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +15,7 @@ import android.widget.TextView;
 
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.data.People;
+import com.github.hardplant.sikgootemplates.ui.activity.ProfileActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +42,18 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         People people = peopleList.get(position);
-
+        final int id = people.getId();
         holder.people_name.setText(people.getName());
         holder.people_hashTag.setText("#Example #Example #Example");
+        holder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                Intent intent = new Intent(context, ProfileActivity.class);
+                bundle.putInt("id", id);
+                context.startActivity(intent, bundle);
+            }
+        });
     }
 
     @Override
@@ -51,6 +65,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
         ImageView thumbnail;
         TextView people_name;
         TextView people_hashTag;
+        View.OnClickListener listener;
 
         CardView cardview;
 
@@ -62,5 +77,11 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
 
             cardview = (CardView) itemView.findViewById(R.id.user_list);
         }
+
+        public void setOnClickListener(View.OnClickListener event){
+            listener = event;
+            itemView.setOnClickListener(listener);
+        }
     }
+
 }
