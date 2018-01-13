@@ -16,6 +16,7 @@
         android:id="@+id/rest_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:src="@drawable/rest_example"/>
     <!-- 식당 정보-->
     <LinearLayout
@@ -25,28 +26,35 @@
         <ImageView
             android:id="@+id/rest_logo"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.15"
+            android:layout_height="100dp"
+            android:layout_weight="0.30"
+            android:layout_marginEnd="20dp"
             android:src="@drawable/rest_example"/>
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.70"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
             <TextView
                 android:id="@+id/rest_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="식당 이름"/>
+                android:text="식당 이름"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
             <TextView
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="식당 설명들"/>
+                android:text="식당 설명들\n식당 설명들\n"/>
         </LinearLayout>
     </LinearLayout>
     <!-- 후기-->
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
