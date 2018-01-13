@@ -1,9 +1,12 @@
 package com.github.hardplant.sikgootemplates.ui.activity;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.data.RestaurantRating;
@@ -23,6 +26,7 @@ public class RestaurantInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_info);
+        setToolbar();
         loadRatings();
         fillRatings();
     }
@@ -46,4 +50,27 @@ public class RestaurantInfoActivity extends AppCompatActivity {
         infoList.add(new RestaurantRating(2, "Awful!", new Date()));
 
     }
+
+    void setToolbar(){
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        setSupportActionBar(mToolbar);
+
+        // add back arrow to toolbar
+        if (getSupportActionBar() != null){
+            final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_24dp);
+            getSupportActionBar().setHomeAsUpIndicator(upArrow);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // close this activity and return to preview activity (if there is any)
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 }
