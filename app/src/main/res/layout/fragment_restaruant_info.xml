@@ -2,10 +2,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical">
+    <!--오늘의 식당-->
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rest_list"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".99">
+        android:layout_height="wrap_content">
+
     </android.support.v7.widget.RecyclerView>
+    <!--구분선-->
+
+    <!--상대-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rest_sangdae"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+    </android.support.v7.widget.RecyclerView>
+    <!--후문-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rest_rear"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+    </android.support.v7.widget.RecyclerView>
+    <!--정문-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rest_front"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+    </android.support.v7.widget.RecyclerView>
+    <!--예대-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rest_yaedae"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+    </android.support.v7.widget.RecyclerView>
+
 </LinearLayout>
