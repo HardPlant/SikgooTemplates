@@ -1,5 +1,6 @@
 package com.github.hardplant.sikgootemplates.ui.activity;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -11,6 +12,7 @@ import android.view.MenuItem;
 
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.ui.MainPagerAdapter;
+import com.github.hardplant.sikgootemplates.ui.fragment.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.action_setting){
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+
             return true;
         }
         return super.onOptionsItemSelected(item);

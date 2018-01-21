@@ -3,32 +3,62 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical">
     <!--오늘의 식당-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:text="오늘의 식당"/>
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/today_rest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </android.support.v7.widget.RecyclerView>
     <!--구분선-->
-
+    <View style="@style/Divider"/>
     <!--상대-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상대"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rest_sangdae"
         android:layout_width="match_parent"
         android:layout_height="100dp">
     </android.support.v7.widget.RecyclerView>
+
+    <!--구분선-->
+    <View style="@style/Divider"/>
     <!--후문-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="후문"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rest_rear"
         android:layout_width="match_parent"
         android:layout_height="100dp">
     </android.support.v7.widget.RecyclerView>
+
+    <!--구분선-->
+    <View style="@style/Divider"/>
     <!--정문-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="정문"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rest_front"
         android:layout_width="match_parent"
         android:layout_height="100dp">
     </android.support.v7.widget.RecyclerView>
+
+    <!--구분선-->
+    <View style="@style/Divider"/>
     <!--예대-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="예대"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rest_yaedae"
         android:layout_width="match_parent"

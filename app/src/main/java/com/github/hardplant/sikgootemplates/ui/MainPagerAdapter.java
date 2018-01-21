@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.github.hardplant.sikgootemplates.ui.fragment.EventFragment;
 import com.github.hardplant.sikgootemplates.ui.fragment.InviteFragment;
 import com.github.hardplant.sikgootemplates.ui.fragment.HomeFragment;
 import com.github.hardplant.sikgootemplates.ui.fragment.RestaurantFragment;
@@ -23,7 +24,7 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
         if(position == 0) return new HomeFragment();
         if(position == 1) return new RestaurantFragment();
         if(position == 2) return new InviteFragment();
-        return new SettingsFragment();
+        return new EventFragment();
     }
 
     @Override

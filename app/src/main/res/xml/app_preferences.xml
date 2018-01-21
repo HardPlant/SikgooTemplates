@@ -3,25 +3,59 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <android.support.v7.preference.PreferenceCategory
-        android:title="Category 1">
-
+        android:title="개인설정">
         <android.support.v7.preference.SwitchPreferenceCompat
-            android:key="key1"
-            android:title="Switch Preference"
-            android:summary="Switch Summary"
+            android:key="block_invite"
+            android:title="초대검색차단"
+            android:summary="검색에 노출되는 것을 차단합니다"
             android:defaultValue="true" />
-
-        <android.support.v7.preference.EditTextPreference
-            android:key="key2"
-            android:title="EditText Preference"
-            android:summary="EditText Summary"
-            android:dialogMessage="Dialog Message"
-            android:defaultValue="Default value" />
+        <Preference
+            android:key="save_friend_list"
+            android:title="저장 친구 관리"
+            android:summary="저장된 친구를 관리합니다"/>
+        <Preference
+            android:key="blocked_friend_list"
+            android:title="차단 친구 관리"
+            android:summary="차단된 친구를 관리합니다"/>
         <android.support.v7.preference.CheckBoxPreference
-            android:key="key3"
-            android:title="CheckBox Preference"
-            android:summary="CheckBox Summary"
-            android:defaultValue="true"/>
+            android:key="auto_login"
+            android:title="자동 로그인"
+            android:summary="애플리케이션을 실행할 때 자동으로 로그인합니다"
+            android:defaultValue="true" />
     </android.support.v7.preference.PreferenceCategory>
-
+    <android.support.v7.preference.PreferenceCategory
+        android:title="시스템 설정">
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:key="push_settings"
+            android:title="알림 켜기"
+            android:summary="알림을 끄거나 켭니다" />
+        <Preference
+            android:key="contact_us"
+            android:title="신고 및 건의"
+            android:summary="EditText Summary" />
+        <Preference
+            android:key="share_this"
+            android:title="앱 추천하기"
+            android:summary="이 앱을 추천해주세요!" />
+    </android.support.v7.preference.PreferenceCategory>
 </android.support.v7.preference.PreferenceScreen>
+
+    <!--
+            <android.support.v7.preference.SwitchPreferenceCompat
+                android:key="key1"
+                android:title="Switch Preference"
+                android:summary="Switch Summary"
+                android:defaultValue="true" />
+
+            <android.support.v7.preference.EditTextPreference
+                android:key="key2"
+                android:title="EditText Preference"
+                android:summary="EditText Summary"
+                android:dialogMessage="Dialog Message"
+                android:defaultValue="Default value" />
+            <android.support.v7.preference.CheckBoxPreference
+                android:key="key3"
+                android:title="CheckBox Preference"
+                android:summary="CheckBox Summary"
+                android:defaultValue="true"/>
+                -->

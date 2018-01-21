@@ -10,6 +10,11 @@ public class People {
     String Name;
     String[] HashTag;
 
+    int resCode;
+    Food[] likes;
+    Food[] dislikes;
+    TimeTable timeTable;
+
     public People(String image, String name, String[] hashTag) {
         Image = image;
         Name = name;

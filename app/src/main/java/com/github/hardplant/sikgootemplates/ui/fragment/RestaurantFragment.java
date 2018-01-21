@@ -23,10 +23,23 @@ import java.util.ArrayList;
  */
 
 public class RestaurantFragment extends Fragment{
-    private RecyclerView restView;
-    private GridLayoutManager mGridLayoutManager;
+    private RecyclerView restViewToday;
+    private RecyclerView restViewSangdae;
+    private RecyclerView restViewFront;
+    private RecyclerView restViewRear;
+    private RecyclerView restViewYaedae;
 
-    private ArrayList<RestaurantInfo> restList;
+    private LinearLayoutManager linearLayoutManagerFront;
+    private LinearLayoutManager linearLayoutManagerRear;
+    private LinearLayoutManager linearLayoutManagerYaedae;
+    private LinearLayoutManager linearLayoutManagerSangdae;
+    private LinearLayoutManager linearLayoutManagerVertical;
+
+    private ArrayList<RestaurantInfo> restListToday;
+    private ArrayList<RestaurantInfo> restListSangdae;
+    private ArrayList<RestaurantInfo> restListFront;
+    private ArrayList<RestaurantInfo> restListRear;
+    private ArrayList<RestaurantInfo> restListYaedae;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,20 +51,84 @@ public class RestaurantFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_restaruant_info, container, false);
 
-        restList = new ArrayList<RestaurantInfo>();
-        restList.add(new RestaurantInfo("Hi"));
-        restList.add(new RestaurantInfo("Hi"));
-        restList.add(new RestaurantInfo("Hi"));
+        addtestData();
+
+        //mGridLayoutManager = new GridLayoutManager(getActivity(), 2);
+        linearLayoutManagerVertical = new LinearLayoutManager(getActivity()
+                , LinearLayoutManager.VERTICAL, false);
+        linearLayoutManagerFront = new LinearLayoutManager(getActivity(),
+                LinearLayoutManager.HORIZONTAL, false);
+        linearLayoutManagerYaedae = new LinearLayoutManager(getActivity(),
+                LinearLayoutManager.HORIZONTAL, false);
+        linearLayoutManagerSangdae = new LinearLayoutManager(getActivity(),
+                LinearLayoutManager.HORIZONTAL, false);
+        linearLayoutManagerYaedae = new LinearLayoutManager(getActivity(),
+                LinearLayoutManager.HORIZONTAL, false);
+
+        restViewToday = (RecyclerView)rootView.findViewById(R.id.today_rest);
+        restViewToday.setHasFixedSize(true);
+        restViewToday.setLayoutManager(linearLayoutManagerVertical);
 
 
-        mGridLayoutManager = new GridLayoutManager(getActivity(), 2);
+        restViewFront = (RecyclerView)rootView.findViewById(R.id.rest_front);
+        restViewFront.setHasFixedSize(true);
+        restViewFront.setLayoutManager(linearLayoutManagerFront);
 
-        restView = (RecyclerView)rootView.findViewById(R.id.rest_list);
-        restView.setHasFixedSize(true);
-        restView.setLayoutManager(mGridLayoutManager);
 
-        RestaurantAdapter restaurantAdapter = new RestaurantAdapter(getActivity(),restList);
-        restView.setAdapter(restaurantAdapter);
+        restViewRear = (RecyclerView)rootView.findViewById(R.id.rest_rear);
+        restViewRear.setHasFixedSize(true);
+        restViewRear.setLayoutManager(linearLayoutManagerRear);
 
-        return rootView;    }
+
+        restViewSangdae = (RecyclerView)rootView.findViewById(R.id.rest_sangdae);
+        restViewSangdae.setHasFixedSize(true);
+        restViewSangdae.setLayoutManager(linearLayoutManagerSangdae);
+
+
+        restViewYaedae = (RecyclerView)rootView.findViewById(R.id.rest_yaedae);
+        restViewYaedae.setHasFixedSize(true);
+        restViewYaedae.setLayoutManager(linearLayoutManagerYaedae);
+
+
+        RestaurantAdapter todayAdapter = new RestaurantAdapter(getActivity()
+                ,restListToday);
+        restViewToday.setAdapter(todayAdapter);
+
+        RestaurantAdapter frontAdapter = new RestaurantAdapter(getActivity()
+                ,restListFront);
+        restViewFront.setAdapter(frontAdapter);
+
+        RestaurantAdapter rearAdapter = new RestaurantAdapter(getActivity()
+                ,restListRear);
+        restViewRear.setAdapter(rearAdapter);
+
+        RestaurantAdapter sangdaeAdapter = new RestaurantAdapter(getActivity()
+                ,restListSangdae);
+        restViewSangdae.setAdapter(sangdaeAdapter);
+
+        RestaurantAdapter yaedaeAdapter = new RestaurantAdapter(getActivity()
+                ,restListYaedae);
+        restViewYaedae.setAdapter(yaedaeAdapter);
+
+        return rootView;
+    }
+    private void addtestData(){
+        ArrayList<RestaurantInfo> testData = new ArrayList<RestaurantInfo>();
+        testData.add(new RestaurantInfo("Hi"));
+        testData.add(new RestaurantInfo("Hi"));
+        testData.add(new RestaurantInfo("Hi"));
+
+        restListToday = new ArrayList<>();
+        restListFront = new ArrayList<>();
+        restListRear = new ArrayList<>();
+        restListYaedae = new ArrayList<>();
+        restListSangdae = new ArrayList<>();
+
+        restListToday.addAll(testData);
+
+        restListFront.addAll(testData);
+        restListRear.addAll(testData);
+        restListYaedae.addAll(testData);
+        restListSangdae.addAll(testData);
+    }
 }
