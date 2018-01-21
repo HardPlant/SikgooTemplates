@@ -7,8 +7,10 @@
     <!--오늘의 식당-->
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:text="오늘의 식당"/>
+        android:layout_height="wrap_content"
+        android:text="오늘의 식당"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/today_rest"
         android:layout_width="match_parent"
@@ -21,7 +23,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="상대"/>
+        android:text="상대"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rest_sangdae"
         android:layout_width="match_parent"
@@ -34,7 +38,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="후문"/>
+        android:text="후문"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rest_rear"
         android:layout_width="match_parent"
@@ -47,7 +53,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="정문"/>
+        android:text="정문"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rest_front"
         android:layout_width="match_parent"
@@ -60,7 +68,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="예대"/>
+        android:text="예대"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rest_yaedae"
         android:layout_width="match_parent"

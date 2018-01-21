@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.v7.widget.CardView
+    android:id="@+id/cardview"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/list_selector_people"
-    android:orientation="horizontal"
-    android:padding="10dip" >
+    android:orientation="horizontal" >
 
     <!--  ListRow Left sied Thumbnail image -->
     <LinearLayout android:id="@+id/thumbnail"
@@ -60,3 +67,5 @@
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Edit.선인" />
 </RelativeLayout>
+</android.support.v7.widget.CardView>
+</LinearLayout>

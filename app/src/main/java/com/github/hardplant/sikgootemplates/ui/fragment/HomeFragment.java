@@ -34,6 +34,7 @@ public class HomeFragment extends Fragment {
     private LinearLayoutManager mLinearLayoutManager;
     private GridLayoutManager mGridLayoutManager;
 
+
     private ArrayList<People> peopleList;
     private ArrayList<RestaurantInfo> restList;
 
@@ -78,7 +79,7 @@ public class HomeFragment extends Fragment {
         restList.add(new RestaurantInfo("Hi"));
         restList.add(new RestaurantInfo("Hi"));
 
-        mGridLayoutManager = new GridLayoutManager(getActivity(), 2);
+        mGridLayoutManager = new GridLayoutManager(getActivity(), 3);
         restView = (RecyclerView)rootView.findViewById(R.id.rest_list);
         restView.setHasFixedSize(true);
         restView.setLayoutManager(mGridLayoutManager);
