@@ -1,6 +1,7 @@
 package com.github.hardplant.sikgootemplates.ui.activity;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         setTab();
         setViewPager();
         addListeners();
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.bringToFront();
     }
 
     void setToolbar(){

@@ -25,7 +25,8 @@
         <activity
             android:name=".ui.activity.SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".ui.activity.appSettingActivity"></activity>
+        <activity android:name=".ui.activity.appSettingActivity" />
+        <activity android:name=".ui.activity.ChatActivity"></activity>
     </application>
 
 </manifest>
