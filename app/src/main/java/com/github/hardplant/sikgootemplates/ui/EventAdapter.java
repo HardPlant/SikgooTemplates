@@ -24,6 +24,11 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     Context context;
     List<Event> items;
 
+    public EventAdapter(Context context, List<Event> items) {
+        this.context = context;
+        this.items = items;
+    }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())

@@ -2,6 +2,8 @@ package com.github.hardplant.sikgootemplates.data;
 
 import android.graphics.drawable.Drawable;
 
+import com.github.hardplant.sikgootemplates.R;
+
 import java.util.Date;
 
 /**
@@ -40,5 +42,10 @@ public class Event {
 
     public int getImage() {
         return image;
+    }
+
+    public Event setTestImage() {
+        this.image = R.drawable.people_example;
+        return this;
     }
 }
