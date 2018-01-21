@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/invite"
+        android:id="@+id/save"
         android:orderInCategory="100"
-        android:title="초대하기" />
+        android:title="저장하기" />
+    <item
+        android:id="@+id/block"
+        android:orderInCategory="200"
+        android:title="차단하기" />
     <item
         android:id="@+id/call"
-        android:orderInCategory="200"
+        android:orderInCategory="300"
         android:title="신고하기" />
 </menu>

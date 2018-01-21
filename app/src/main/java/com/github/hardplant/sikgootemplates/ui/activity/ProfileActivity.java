@@ -19,8 +19,8 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        plusButton = (ImageButton) findViewById(R.id.plus_button);
         setToolbar();
+        setButton();
     }
 
     void setToolbar(){
@@ -35,34 +35,44 @@ public class ProfileActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
     }
+    void setButton(){
+        plusButton = findViewById(R.id.plus_button);
+        plusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showProfileButton();
+            }
+        });
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // handle arrow click here
         if (item.getItemId() == android.R.id.home) {
             finish(); // close this activity and return to preview activity (if there is any)
         }
-        if(item.getItemId() == R.id.plus_button){
-            PopupMenu pm = new PopupMenu(ProfileActivity.this, plusButton);
-            pm.getMenuInflater().inflate(R.menu.menu_profile, pm.getMenu());
-            pm.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem menuItem) {
-                    Toast.makeText(getApplicationContext(), String.valueOf(menuItem.getTitle()), Toast.LENGTH_SHORT).show();
-                    switch(menuItem.getItemId()){
-                        case R.id.invite:
-                            break;
-                        case R.id.call:
-                            break;
-                        default:
-                            break;
-                    }
-                    return true;
-                }
-            });
-            pm.show();
-        }
-
         return super.onOptionsItemSelected(item);
+    }
+    void showProfileButton(){
+        PopupMenu pm = new PopupMenu(ProfileActivity.this, plusButton);
+        pm.getMenuInflater().inflate(R.menu.menu_profile, pm.getMenu());
+        pm.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                Toast.makeText(getApplicationContext(), String.valueOf(menuItem.getTitle()), Toast.LENGTH_SHORT).show();
+                switch(menuItem.getItemId()){
+                    case R.id.save:
+                        break;
+                    case R.id.block:
+                        break;
+                    case R.id.call:
+                        break;
+                    default:
+                        break;
+                }
+                return true;
+            }
+        });
+        pm.show();
     }
 
 }
