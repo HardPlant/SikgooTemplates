@@ -5,12 +5,6 @@
     tools:context=".MainActivity">
 
     <item
-        android:id="@+id/action_user"
-        android:orderInCategory="300"
-        android:title="User"
-        android:icon="@drawable/ic_contacts_24dp"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/action_setting"
         android:orderInCategory="400"
         android:title="Settings"

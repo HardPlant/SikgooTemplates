@@ -1,5 +1,6 @@
 package com.github.hardplant.sikgootemplates.ui.activity;
 
+import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.github.hardplant.sikgootemplates.R;
+import com.github.hardplant.sikgootemplates.ui.dialog.ImageDialog;
 
 public class ProfileActivity extends AppCompatActivity {
     ImageButton plusButton;
@@ -61,6 +63,7 @@ public class ProfileActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), String.valueOf(menuItem.getTitle()), Toast.LENGTH_SHORT).show();
                 switch(menuItem.getItemId()){
                     case R.id.save:
+                        new ImageDialog(ProfileActivity.this).show();
                         break;
                     case R.id.block:
                         break;
