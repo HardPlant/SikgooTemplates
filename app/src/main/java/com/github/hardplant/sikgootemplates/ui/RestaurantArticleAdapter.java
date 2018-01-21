@@ -14,8 +14,6 @@ import android.widget.TextView;
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.data.RestaurantArticle;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 /**
@@ -69,7 +67,7 @@ public class RestaurantArticleAdapter extends RecyclerView.Adapter<RestaurantArt
 
         public ViewHolder(View itemView) {
             super(itemView);
-            thumbnail = itemView.findViewById(R.id.list_image);
+            thumbnail = itemView.findViewById(R.id.today_rest_thumbnail);
             title = itemView.findViewById(R.id.today_article_name);
             content = itemView.findViewById(R.id.today_content);
             editor = itemView.findViewById(R.id.today_editor);
