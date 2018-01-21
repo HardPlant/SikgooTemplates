@@ -29,6 +29,14 @@
         android:textSize="36sp"
         android:textStyle="bold"/>
 
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_image"
+        android:layout_toEndOf="@+id/people_name"
+        android:src="@drawable/ic_add_black_24dp" />
+
     <TextView
         android:id="@+id/people_hashtag"
         android:layout_width="wrap_content"
@@ -67,6 +75,12 @@
         android:layout_height="300dp"
         android:layout_margin="2dp"
         android:background="@color/black">
-
     </RelativeLayout>
+    <!--초대하기-->
+    <Button
+        android:id="@+id/invite"
+        android:layout_below="@+id/time_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="초대하기"/>
 </RelativeLayout>
