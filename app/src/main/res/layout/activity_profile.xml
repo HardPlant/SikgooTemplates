@@ -8,7 +8,7 @@
     <include
         android:id="@+id/toolbar_main"
         layout="@layout/layout_page_toolbar"/>
-
+<!--사람 소개-->
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="160dp"
@@ -28,6 +28,7 @@
         android:layout_below="@+id/profile_image"
         android:textSize="36sp"
         android:textStyle="bold"/>
+
     <TextView
         android:id="@+id/people_hashtag"
         android:layout_width="wrap_content"
@@ -51,5 +52,21 @@
         android:layout_below="@+id/people_hashtag"
         android:textSize="24sp"
         android:textColor="#333333"/>
+    <!--별점-->
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_below="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--사람 소개-->
+    <!--시간표-->
+    <RelativeLayout
+        android:id="@+id/time_table"
+        android:layout_below="@+id/rating"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="2dp"
+        android:background="@color/black">
 
+    </RelativeLayout>
 </RelativeLayout>

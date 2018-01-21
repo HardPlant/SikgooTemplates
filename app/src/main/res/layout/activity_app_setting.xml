@@ -5,8 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.github.hardplant.sikgootemplates.ui.activity.appSettingActivity">
-<fragment
+    <include
+        android:id="@+id/toolbar_main"
+        layout="@layout/layout_page_toolbar"/>
+    <fragment
     android:name="com.github.hardplant.sikgootemplates.ui.fragment.SettingsFragment"
-    android:layout_width="match_parent"
+    android:id="@+id/frag"
+        android:layout_width="match_parent"
     android:layout_height="match_parent"/>
 </LinearLayout>
