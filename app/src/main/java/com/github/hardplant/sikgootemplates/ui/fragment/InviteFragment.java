@@ -8,12 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.data.People;
-import com.github.hardplant.sikgootemplates.ui.PeopleAdapter;
-import com.github.hardplant.sikgootemplates.ui.RestaurantAdapter;
+import com.github.hardplant.sikgootemplates.ui.PeopleInviteAdapter;
 
 import java.util.ArrayList;
 
@@ -35,7 +33,7 @@ public class InviteFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_user, container, false);
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_invite_user, container, false);
         peopleList = new ArrayList<People>();
         mLinearLayoutManager = new LinearLayoutManager(getActivity());
         mLinearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -50,7 +48,7 @@ public class InviteFragment extends Fragment{
         peopleList.add(new People(null,"박"
                 , new String[]{"#Kim","Park"}));
 
-        PeopleAdapter peopleAdapter = new PeopleAdapter(getActivity(),peopleList);
+        PeopleInviteAdapter peopleAdapter = new PeopleInviteAdapter(getActivity(),peopleList);
         userView.setAdapter(peopleAdapter);
 
 
