@@ -43,12 +43,13 @@
     <!--main-->
     <style name="toolbar_placeholder">
         <item name="android:fontFamily">@font/nanum_square_r</item>
-        <item name="android:textSize">8sp</item>
+        <item name="android:textSize">10sp</item>
         <item name="android:textColor">@color/toolbar_placeholder</item>
     </style>
     <style name="timer">
         <item name="android:fontFamily">@font/nanum_square_r</item>
         <item name="android:textSize">8sp</item>
+        <item name="android:textColor">@color/white</item>
     </style>
     <style name="rest_desc" parent="shadowed">
         <item name="android:fontFamily">@font/nanum_square_r</item>
@@ -63,10 +64,12 @@
     <style name="people_name">
         <item name="android:fontFamily">@font/nanum_square_eb</item>
         <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     <style name="people_hashtag">
         <item name="android:fontFamily">@font/nanum_square_r</item>
         <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     <!--rest-->
     <style name="today_rest" parent="shadowed">
@@ -77,14 +80,19 @@
     <style name="section">
         <item name="android:fontFamily">@font/nanum_square_eb</item>
         <item name="android:textSize">21sp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     <style name="column_title">
         <item name="android:fontFamily">@font/nanum_square_eb</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     <style name="column_content">
         <item name="android:fontFamily">@font/nanum_square_r</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     <!--rest_info-->
     <style name="rest_info_title">

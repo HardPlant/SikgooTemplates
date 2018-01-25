@@ -27,22 +27,24 @@
         >
         <TextView
             android:id="@+id/timer_time"
+            android:layout_marginTop="3dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             android:text="n월 n일 요일 오후 n시 n분"
-            android:textColor="@color/white"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            style="@style/timer"/>
 
         <TextView
             android:id="@+id/timer_period"
             android:layout_width="match_parent"
             android:layout_below="@+id/timer_time"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
 
             android:text="n교시 수업중입니다"
-            android:textColor="@color/white"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            style="@style/timer"/>
     </RelativeLayout>
 
 <android.support.design.widget.CoordinatorLayout
