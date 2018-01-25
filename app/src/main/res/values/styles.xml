@@ -27,6 +27,7 @@
         <item name="android:layout_height">1dp</item>
         <item name="android:background">@color/text_shadow</item>
     </style>
+    <!--popup-->
     <style name="popup_title" parent="shadowed">
         <item name="android:fontFamily">@font/NanumSquareEB</item>
         <item name="android:textSize">32sp</item>
@@ -39,6 +40,49 @@
         <item name="android:fontFamily">@font/NanumSquareEB</item>
         <item name="android:textSize">15sp</item>
     </style>
-
+    <!--main-->
+    <style name="toolbar_placeholder">
+        <item name="android:fontFamily">@font/NanumSquareR</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">@color/toolbar_placeholder</item>
+    </style>
+    <style name="timer">
+        <item name="android:fontFamily">@font/NanumSquareR</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+    <style name="rest_desc" parent="shadowed">
+        <item name="android:fontFamily">@font/NanumSquareR</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+    <style name="match_button">
+        <item name="android:fontFamily">@font/Eras Bold ITC</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+    <style name="people_name">
+        <item name="android:fontFamily">@font/NanumSquareEB</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="people_hashtag">
+        <item name="android:fontFamily">@font/NanumSquareR</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <!--rest-->
+    <style name="today_rest" parent="shadowed">
+    <item name="android:fontFamily">@font/NanumSquareEB</item>
+    <item name="android:textSize">32sp</item>
+    </style>
+    <style name="column_section">
+        <item name="android:fontFamily">@font/NanumSquareEB</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="column_title">
+        <item name="android:fontFamily">@font/NanumSquareEB</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="column_content">
+        <item name="android:fontFamily">@font/NanumSquareR</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--rest_info-->
 
 </resources>
