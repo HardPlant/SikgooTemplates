@@ -9,15 +9,33 @@
         android:id="@+id/toolbar_main"
         layout="@layout/layout_page_toolbar"/>
 <!--사람 소개-->
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
+    <RelativeLayout
+        android:id="@+id/profile_area"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/people_example"
-        app:civ_border_width="2dp"
-        app:civ_circle_background_color="@color/black" />
+        android:layout_below="@id/toolbar_main"
+        android:layout_marginTop="24dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/people_example"
+            app:civ_border_width="2dp"
+            app:civ_circle_background_color="@color/black" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/plus_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_add_black_24dp"
+            app:civ_circle_background_color="@color/black"
+            app:civ_border_width="2dp"/>
+    </RelativeLayout>
     <TextView
         android:id="@+id/people_name"
         android:layout_width="wrap_content"
@@ -25,17 +43,9 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:text="사람 이름"
-        android:layout_below="@+id/profile_image"
+        android:layout_below="@+id/profile_area"
         android:textSize="36sp"
         android:textStyle="bold"/>
-
-    <android.support.v7.widget.AppCompatImageButton
-        android:id="@+id/plus_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_image"
-        android:layout_toEndOf="@+id/people_name"
-        android:src="@drawable/ic_add_black_24dp" />
 
     <TextView
         android:id="@+id/people_hashtag"
