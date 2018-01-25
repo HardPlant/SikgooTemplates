@@ -31,10 +31,7 @@
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="멋진 기적"
-        android:textColor="#040404"
-        android:typeface="sans"
-        android:textSize="15dip"
-        android:textStyle="bold"/>
+        style="@style/people_name"/>
 
     <!-- HashTag -->
     <TextView
@@ -42,10 +39,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/people_name"
-        android:textColor="#343434"
-        android:textSize="10dip"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"
-        android:text="#멋진 기적" />
+        android:text="#멋진 기적"
+        style="@style/people_hashtag"/>
 
 </RelativeLayout>

@@ -13,9 +13,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="진행 중인 이벤트"
-            android:layout_margin="10dp"
-            android:textSize="20sp"/>
+            android:text="@string/section_event"
+            style="@style/section"
+            android:layout_margin="10dp"/>
         <android.support.v7.widget.RecyclerView
             android:id="@+id/event_start_list"
             android:layout_width="match_parent"
@@ -33,9 +33,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="종료된 이벤트"
-                android:layout_margin="10dp"
-                android:textSize="20sp"/>
+                android:text="@string/section_event_ended"
+                style="@style/section"
+                android:layout_margin="10dp"/>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/event_end_list"
                 android:layout_width="match_parent"

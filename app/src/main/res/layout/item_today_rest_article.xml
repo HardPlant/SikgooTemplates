@@ -28,7 +28,6 @@
 
     </LinearLayout>
 
-    <!-- Name -->
     <TextView
         android:id="@+id/today_article_name"
         android:layout_width="wrap_content"
@@ -36,34 +35,26 @@
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="멋진 기적"
-        android:textColor="#040404"
-        android:typeface="sans"
-        android:textSize="15dip"
-        android:textStyle="bold"/>
+        android:layout_marginTop="8dp"
+        style="@style/column_title"/>
 
-    <!-- Content -->
     <TextView
         android:id="@+id/today_content"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/today_article_name"
-        android:textColor="#343434"
-        android:textSize="10dip"
-        android:layout_marginTop="1dip"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:text="#멋진 기적" />
+        android:text="#멋진 기적"
+        style="@style/column_content"/>
 
-    <!-- HashTag -->
     <TextView
         android:id="@+id/today_editor"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/today_content"
-        android:textColor="#343434"
-        android:textSize="10dip"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"
-        android:text="Edit.선인" />
+        android:text="Edit.선인"
+        style="@style/column_content"/>
 </RelativeLayout>
 </android.support.v7.widget.CardView>
 </LinearLayout>

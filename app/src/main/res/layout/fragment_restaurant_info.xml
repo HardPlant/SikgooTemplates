@@ -18,8 +18,8 @@
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="맛깔나는 맛칼럼"
-    android:textSize="36sp"
+    android:text="@string/section_column"
+    style="@style/section"
     android:layout_margin="8dp"/>
 <!--구분선-->
     <View style="@style/Divider"/>

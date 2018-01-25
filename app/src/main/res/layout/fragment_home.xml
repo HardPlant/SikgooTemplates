@@ -24,7 +24,7 @@
             android:layout_gravity="center"
             android:layout_weight=".10"
 
-            android:text="MATCH"
+            android:text="@string/match"
             android:textAlignment="center"
             android:textSize = "40sp"
             android:textColor="@color/white"

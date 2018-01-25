@@ -6,7 +6,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="차단친구관리"/>
+        android:text="@string/section_block_list"
+        style="@style/section"/>
 
     <View style="@style/Divider"/>
     <!-- RecyclerView -->

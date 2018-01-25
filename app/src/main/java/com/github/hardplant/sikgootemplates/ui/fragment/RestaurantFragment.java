@@ -70,7 +70,7 @@ public class RestaurantFragment extends Fragment {
 
     void addTestData(){
         todayList.add(new TodayRestaurant("상무").setTestId());
-        articleList.add(new RestaurantArticle("상무","상무","상무")
+        articleList.add(new RestaurantArticle("상무","상무","Edited by 선인")
         .setTestId());
     }
 }
