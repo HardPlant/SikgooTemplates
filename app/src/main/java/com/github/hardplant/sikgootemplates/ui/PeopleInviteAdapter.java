@@ -48,7 +48,7 @@ class PeopleInviteAdapter extends RecyclerView.Adapter<PeopleInviteAdapter.ViewH
                 civ = itemView.findViewById(R.id.thumbnail);
                 name = itemView.findViewById(R.id.people_name);
                 ratingBar = itemView.findViewById(R.id.rating);
-                button = itemView.findViewById(R.id.button);
+                button = itemView.findViewById(R.id.delete);
             }
     }
 }
