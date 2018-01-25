@@ -42,6 +42,7 @@
         android:id="@+id/today_content"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/thumbnail"
         android:layout_below="@id/today_article_name"
         android:text="#멋진 기적"
         style="@style/column_content"/>
