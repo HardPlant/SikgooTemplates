@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context="com.github.hardplant.sikgootemplates.ui.activity.ProfileActivity">
     <include
         android:id="@+id/toolbar_main"
@@ -13,9 +17,8 @@
         android:id="@+id/profile_area"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/toolbar_main"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="160dp"
@@ -36,77 +39,126 @@
             app:civ_circle_background_color="@color/black"
             app:civ_border_width="2dp"/>
     </RelativeLayout>
-    <TextView
-        android:id="@+id/people_name"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="사람 이름"
-        android:layout_below="@+id/profile_area"
-        android:textSize="36sp"
-        android:textStyle="bold"/>
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/people_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="사람 이름"
+            android:textSize="36sp"
+            android:textStyle="bold"/>
+        <!--별점-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_gravity="center"
+                android:rating="1"
+                android:isIndicator="true"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="4.3"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="인내천 사상"
+            android:textSize="12sp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+
+    <View android:id="@+id/divider" style="@style/Divider"
+        android:layout_margin="4dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/like_food_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="좋아요 "/>
+        <TextView
+            android:id="@+id/like_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#한식"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/hates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/hate_food_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="싫어요 "/>
+        <TextView
+            android:id="@+id/hate_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#한식"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/habitate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lair_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="서식지 "/>
+        <TextView
+            android:id="@+id/lair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#후문"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/people_hashtag"
+        android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="#해시 #태그"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@id/people_name"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#333333"/>
-
-    <TextView
-        android:id="@+id/like_food_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="좋아요 "
-        android:layout_below="@+id/people_hashtag"/>
-    <TextView
-        android:id="@+id/like_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/like_food_label"
-        android:text="#한식"/>
-    <TextView
-        android:id="@+id/hate_food_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="싫어요 "
-        android:layout_below="@+id/like_food_label"/>
-    <TextView
-        android:id="@+id/hate_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/hate_food_label"
-        android:text="#한식"/>
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="인내천 사상"
-        android:layout_below="@+id/hate_food_label"
-        android:textSize="24sp"
-        android:textColor="#333333"/>
-    <!--별점-->
-    <RatingBar
-        android:id="@+id/rating"
-        android:layout_below="@+id/description"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:text="#볼프강스테이크"/>
+    </LinearLayout>
     <!--사람 소개-->
     <!--시간표-->
     <RelativeLayout
         android:id="@+id/time_table"
-        android:layout_below="@+id/rating"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_margin="2dp"
@@ -119,4 +171,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="초대하기"/>
-</RelativeLayout>
+
+</LinearLayout>
+</ScrollView>
