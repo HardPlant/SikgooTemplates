@@ -16,7 +16,7 @@ import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.ui.dialog.ImageDialog;
 
 public class ProfileActivity extends AppCompatActivity {
-    ImageButton plusButton;
+    View plusButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
