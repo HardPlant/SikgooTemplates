@@ -15,9 +15,9 @@
         android:id="@+id/rest_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         android:src="@drawable/rest_example"/>
     <!-- 식당 정보-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         <ImageView
             android:id="@+id/rest_logo"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_weight="0.30"
             android:layout_marginEnd="20dp"
             android:src="@drawable/rest_example"/>
@@ -44,13 +44,25 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="식당 설명들\n식당 설명들\n"/>
+                android:text="영업시간: hh:mm - hh:mm"/>
+            <TextView
+                android:id="@+id/delivery_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="배달가능"/>
+            <TextView
+                android:id="@+id/hotline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="062-520-1234"/>
         </LinearLayout>
     </LinearLayout>
     <!-- 후기-->
+    <View style="@style/Divider" android:layout_margin="4dp"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp">
@@ -70,6 +82,7 @@
     <RelativeLayout
         android:id="@+id/map_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/black">
     </RelativeLayout>
 </LinearLayout>

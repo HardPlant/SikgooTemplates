@@ -4,7 +4,7 @@
     <string name="restaurant">식당</string>
     <string name="invite">초대</string>
     <string name="event">이벤트</string>
-    <string name="search_placeholder">식사를 함께할 친구를 찾아보세요</string>
+    <string name="search_placeholder">   식사를 함께할 친구를 찾아보세요</string>
     <string name="title_activity_settings">Settings</string>
 
     <string name="section_column">맛깔나는 맛칼럼</string>
