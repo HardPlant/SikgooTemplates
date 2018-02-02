@@ -1,6 +1,7 @@
 package com.github.hardplant.sikgootemplates.ui.activity;
 
 import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
@@ -12,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.ui.MainPagerAdapter;
@@ -55,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
         mTabLayout.addTab(mTabLayout.newTab().setText("초대"));
         mTabLayout.addTab(mTabLayout.newTab().setText("이벤트"));
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        View root = mTabLayout.getChildAt(0);
+        if (root instanceof LinearLayout) {
+            ((LinearLayout) root).setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
+            GradientDrawable drawable = new GradientDrawable();
+            drawable.setColor(getResources().getColor(R.color.black));
+            drawable.setSize(1, 1);
+            ((LinearLayout) root).setDividerPadding(10);
+            ((LinearLayout) root).setDividerDrawable(drawable);
+        }
     }
 
     void setViewPager(){

@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import com.github.hardplant.sikgootemplates.R;
 import com.github.hardplant.sikgootemplates.data.Event;
+import com.github.hardplant.sikgootemplates.ui.activity.ProfileActivity;
+import com.github.hardplant.sikgootemplates.ui.dialog.ImageDialog;
 
 import java.util.List;
 
@@ -45,7 +47,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                new ImageDialog(context).show();
             }
         });
     }

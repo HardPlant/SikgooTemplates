@@ -63,7 +63,6 @@ public class ProfileActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), String.valueOf(menuItem.getTitle()), Toast.LENGTH_SHORT).show();
                 switch(menuItem.getItemId()){
                     case R.id.save:
-                        new ImageDialog(ProfileActivity.this).show();
                         break;
                     case R.id.block:
                         break;
