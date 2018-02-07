@@ -18,7 +18,7 @@
         app:tabTextColor="@color/black" >
 
     </android.support.design.widget.TabLayout>
-    <!-- Timer -->
+    <PeriodTimerimer -->
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/timer"
         android:layout_height="wrap_content"

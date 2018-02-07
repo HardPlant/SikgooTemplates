@@ -1,32 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context="com.github.hardplant.sikgootemplates.ui.activity.ChatActivity">
+
         <include
-        android:id="@+id/toolbar_main"
-        layout="@layout/layout_page_toolbar"/>
+            android:id="@+id/toolbar_main"
+            layout="@layout/layout_page_toolbar" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/chat_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@id/toolbar_main">
 
         </android.support.v7.widget.RecyclerView>
-
+        <View
+            android:id="@+id/chat1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bubble_out"
+            android:layout_margin="4dp"
+            android:layout_below="@id/toolbar_main"
+        />
+        <View
+            android:id="@+id/chat2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bubble_out"
+            android:layout_margin="4dp"
+            android:layout_below="@id/chat1"
+            />
+        <View
+            android:id="@+id/chat3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bubble_out"
+            android:layout_margin="4dp"
+            android:layout_below="@id/chat2"
+            />
         <RelativeLayout
             android:id="@+id/chat_control"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true">
+            android:gravity="bottom">
+
 
             <Button
                 android:id="@+id/attach"
@@ -36,11 +62,11 @@
 
             <EditText
                 android:id="@+id/chat_box"
-                android:layout_centerHorizontal="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_toEndOf="@id/attach"
-                android:layout_toStartOf="@+id/send"/>
+                android:layout_toStartOf="@+id/send" />
 
             <Button
                 android:id="@+id/send"
@@ -48,7 +74,5 @@
                 android:layout_height="48dp"
                 android:layout_alignParentEnd="true" />
         </RelativeLayout>
-
     </RelativeLayout>
-
 </ScrollView>

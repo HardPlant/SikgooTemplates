@@ -21,6 +21,7 @@
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:layout_weight="0.8"
+            android:padding="8dp"
             android:hint="식사를 함께할 친구를 찾아보세요"
             style="@style/toolbar_placeholder"
             android:background="@null"/>

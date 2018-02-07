@@ -14,10 +14,14 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.github.hardplant.sikgootemplates.R;
+import com.github.hardplant.sikgootemplates.data.PeriodTimer;
 import com.github.hardplant.sikgootemplates.ui.MainPagerAdapter;
 import com.github.hardplant.sikgootemplates.ui.fragment.SettingsFragment;
+
+import java.util.Timer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setTab();
         setViewPager();
         addListeners();
+        setTimer();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.bringToFront();
@@ -93,6 +98,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    void setTimer(){
+        TextView timerView = findViewById(R.id.timer_time);
+        TextView PeriodView = findViewById(R.id.timer_period);
+        PeriodTimer periodTimer = new PeriodTimer(timerView, PeriodView);
+        periodTimer.run();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -110,5 +121,5 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+}
 }
