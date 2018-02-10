@@ -1,5 +1,7 @@
 package com.github.hardplant.sikgootemplates.data;
 
+import android.app.Activity;
+import android.content.Context;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -13,6 +15,7 @@ import java.util.TimerTask;
  */
 
 public class PeriodTimer {
+    Context context;
     Timer timer;
     TimerTask task;
     TextView timerView;
@@ -24,14 +27,21 @@ public class PeriodTimer {
     final DateFormat timerFormat = new SimpleDateFormat(TimerFormat);
     DateFormat periodDF = new SimpleDateFormat("E, HH, mm");
 
-    public PeriodTimer(TextView textView, TextView periodView) {
+    public PeriodTimer(final Context context, TextView textView, TextView periodView) {
+        this.context = context;
         this.timerView = textView;
         this.periodView = periodView;
         this.timer = new Timer();
-        TimerTask task = new TimerTask() {
+        task = new TimerTask() {
             @Override
             public void run() {
-                setTextView();
+                ((Activity)context).runOnUiThread(new Runnable() {
+                                                      @Override
+                                                      public void run() {
+                                                          setTextView();
+                                                      }
+                                                  }
+                );
             }
         };
     }

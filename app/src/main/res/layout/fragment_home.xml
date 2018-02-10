@@ -8,7 +8,7 @@
         android:id="@+id/rest_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".40">
+        android:layout_weight=".25">
     </android.support.v7.widget.RecyclerView>
 
         <!-- Match Button -->
@@ -16,8 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
 
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:background="@color/black"
@@ -27,6 +27,7 @@
             android:text="@string/match"
             android:textAlignment="center"
             android:textSize = "40sp"
+
             android:textColor="@color/white"
 
             android:id="@+id/match_button"
@@ -38,7 +39,7 @@
         android:id="@+id/user_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".40">
+        android:layout_weight=".30">
     </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

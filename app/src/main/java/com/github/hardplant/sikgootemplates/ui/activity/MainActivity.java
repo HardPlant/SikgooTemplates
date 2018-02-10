@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     void setTimer(){
         TextView timerView = findViewById(R.id.timer_time);
         TextView PeriodView = findViewById(R.id.timer_period);
-        PeriodTimer periodTimer = new PeriodTimer(timerView, PeriodView);
+        PeriodTimer periodTimer = new PeriodTimer(this, timerView, PeriodView);
         periodTimer.run();
     }
 

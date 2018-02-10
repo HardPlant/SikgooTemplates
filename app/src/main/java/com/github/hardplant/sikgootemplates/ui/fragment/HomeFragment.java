@@ -73,11 +73,14 @@ public class HomeFragment extends Fragment {
         userView = (RecyclerView)rootView.findViewById(R.id.user_list);
         userView.setHasFixedSize(true);
         userView.setLayoutManager(mLinearLayoutManager);
-
         restList = new ArrayList<RestaurantInfo>();
-        restList.add(new RestaurantInfo("Hi"));
-        restList.add(new RestaurantInfo("Hi"));
-        restList.add(new RestaurantInfo("Hi"));
+        restList.add(new RestaurantInfo("한식",R.drawable.food1));
+        restList.add(new RestaurantInfo("중식",R.drawable.food2));
+        restList.add(new RestaurantInfo("일식",R.drawable.food3));
+        restList.add(new RestaurantInfo("양식",R.drawable.food4));
+        restList.add(new RestaurantInfo("불식",R.drawable.food5));
+        restList.add(new RestaurantInfo("사용식",R.drawable.food6));
+
 
         mGridLayoutManager = new GridLayoutManager(getActivity(), 3);
         restView = (RecyclerView)rootView.findViewById(R.id.rest_list);

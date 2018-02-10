@@ -42,6 +42,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
         RestaurantInfo restaurantInfo = restList.get(position);
 
         holder.name.setText(restaurantInfo.getName());
+        holder.thumbnail.setImageResource(restaurantInfo.getId());
         holder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

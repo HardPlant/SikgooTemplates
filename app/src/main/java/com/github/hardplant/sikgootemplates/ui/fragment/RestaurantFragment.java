@@ -69,8 +69,10 @@ public class RestaurantFragment extends Fragment {
     }
 
     void addTestData(){
-        todayList.add(new TodayRestaurant("상무").setTestId());
-        articleList.add(new RestaurantArticle("상무","상무","Edited by 선인")
+        todayList.add(new TodayRestaurant("상대 도스마스").setTestId());
+        articleList.add(new RestaurantArticle("상대 도스마스 전남대점"
+                ,"간단하게 먹는 한끼식사 도스마스를 해부하다"
+                ,"Edited by 선인")
         .setTestId());
     }
 }

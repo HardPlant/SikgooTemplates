@@ -73,11 +73,11 @@ public class EventFragment extends Fragment{
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
         try{Date sample = sdf.parse(dates);
-        startList.add(new Event("춘부집 1+1 이벤트", "이벤트", sample,sample)
+        startList.add(new Event("춘부집 1+1", "이벤트", sample,sample)
             .setTestImage());
-        startList.add(new Event("춘부집 1+1 이벤트", "이벤트", sample,sample)
+        startList.add(new Event("밥은 먹고 공부하니?", "이벤트", sample,sample)
                 .setTestImage());
-        endList.add(new Event("춘부집 1+1 이벤트", "이벤트", sample,sample)
+        endList.add(new Event("주완아 잘 다녀와~", "이벤트", sample,sample)
                 .setTestImage());
         } catch (Exception e) {}
     }
